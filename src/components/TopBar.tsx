@@ -7,7 +7,7 @@ export const TopBar = () => {
         <div className='w-1/3 flex justify-center border-r-2'>
             <div className='flex gap-5'>
                 <span className='flex items-center'>
-                    <FontAwesomeIcon icon={faLocationDot} className='scale-150 text-[#7AB730] text-xl'/>
+                    <FontAwesomeIcon icon={faLocationDot} className='scale-150 text-primarycolor text-xl'/>
                 </span>
                 <span>
                     <p className='font-bold'>OUR OFFICE</p>
@@ -18,7 +18,7 @@ export const TopBar = () => {
         <div className='w-1/3 flex justify-center border-r-2'>
             <div className='flex gap-5'>
                 <span className='flex items-center'>
-                    <FontAwesomeIcon icon={faEnvelopeOpen} className='scale-150 text-[#7AB730] text-xl'/>
+                    <FontAwesomeIcon icon={faEnvelopeOpen} className='scale-150 text-primarycolor text-xl'/>
                 </span>
                 <span>
                     <p  className='font-bold'>EMAIL US</p>
@@ -29,7 +29,7 @@ export const TopBar = () => {
         <div className='w-1/3 flex justify-center border-r-2'>
         <div className='flex gap-5'>
                 <span className='flex items-center'>
-                    <FontAwesomeIcon icon={faPhone} className='scale-150 text-[#7AB730] text-xl'/>
+                    <FontAwesomeIcon icon={faPhone} className='scale-150 text-primarycolor text-xl'/>
                 </span>
                 <span>
                     <p  className='font-bold'>CALL US</p>
