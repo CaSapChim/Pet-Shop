@@ -14,7 +14,7 @@ export const AboutComponent = () => {
           <button className='bg-primarycolor w-1/2 py-2 text-white text-xl'>
             OUR MISSION
           </button>
-          <button className='text-primarycolor w-1/2 py-2 text-xl hover:text-primarycolor'>
+          <button className='text-primarycolor w-1/2 py-2 text-xl hover:text-[#66893e] duration-300'>
             OUR VISSION
           </button>
           <p className='text-gray-500 mt-2'>
