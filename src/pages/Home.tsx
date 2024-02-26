@@ -2,6 +2,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { AboutComponent } from "../components/AboutComponent";
 import { ServiceComponent } from "../components/ServiceComponent";
+import { ProductComponent } from "../components/ProductComponent";
+import { OfferComponent } from "../components/OfferComponent";
+import { PricingPlan } from "../components/PricingPlan";
 
 export const Home = () => {
   return (
@@ -21,13 +24,16 @@ export const Home = () => {
               READ MORE
             </button>
             <button className="bg-[#F3F3F3] rounded-[50%] w-16 h-16 text-center flex items-center justify-center before:bg-white before:w-16 before:h-16 before:absolute before:rounded-[50%] before:animate-ping before:duration-300 before:transition-all">
-              <FontAwesomeIcon icon={faPlay} className="text-[#7AB730] text-2xl relative"/>
+              <FontAwesomeIcon icon={faPlay} className="text-primarycolor text-2xl relative"/>
             </button>
           </div>
         </div>
       </div>
       <AboutComponent/>
       <ServiceComponent/>
+      <ProductComponent/>
+      <OfferComponent/>
+      <PricingPlan/>
     </>
   );
 };

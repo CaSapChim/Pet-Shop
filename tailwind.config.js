@@ -21,7 +21,7 @@ export default {
         },
       },
       animation: {
-        fadeUp: "fadeUp .4s linear",
+        fadeUp: "fadeUp .3s linear",
         fadeDown: "fadeDown .4s linear",
       },
     },

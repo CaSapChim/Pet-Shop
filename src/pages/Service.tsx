@@ -1,7 +1,10 @@
 import React from 'react'
+import { ServiceComponent } from '../components/ServiceComponent'
 
 export const Service = () => {
   return (
-    <div>Service</div>
+    <div>
+      <ServiceComponent/>
+    </div>
   )
 }

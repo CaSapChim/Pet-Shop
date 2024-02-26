@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.slick-slide > div {
+    margin: 0 20px;
+}
+
+button.slick-arrow.slick-next::before {
+    color: #7AB730;
+}
+
+button.slick-arrow.slick-prev::before {
+    color: #7AB730;
+}
+
+ul.slick-dots {
+    margin: 10px 0;
+}
