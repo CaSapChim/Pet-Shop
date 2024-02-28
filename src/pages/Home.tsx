@@ -6,6 +6,8 @@ import { ProductComponent } from "../components/ProductComponent";
 import { OfferComponent } from "../components/OfferComponent";
 import { PricingPlan } from "../components/PricingPlan";
 import { TeamMembersComponent } from "../components/TeamMembersComponent";
+import { TestimonialComponents } from "../components/TestimonialComponents";
+import { LastestBlogComponent } from "../components/LastestBlogComponent";
 
 export const Home = () => {
   return (
@@ -36,6 +38,8 @@ export const Home = () => {
       <OfferComponent/>
       <PricingPlan/>
       <TeamMembersComponent/>
+      <TestimonialComponents/>
+      <LastestBlogComponent/>
     </>
   );
 };

@@ -54,7 +54,6 @@ export const TeamMembersComponent = () => {
               slidesToShow: 3,
               slidesToScroll: 1,
               infinite: true,
-              dots: true
             }
           },
           {
@@ -82,7 +81,7 @@ export const TeamMembersComponent = () => {
                 <p className='font-bold text-5xl pl-10'>QUALIFIED PETS CARE <br />PROFESSIONALS</p>
             </div>
             <div className='w-full m-auto'>
-                <Slider {...settings} className='mt-10'>
+                <Slider {...settings} className='mt-10 mx-10'>
                     {
                         members.map((mem, i) => (
                             <div key={i} className='bg-gray-200'>

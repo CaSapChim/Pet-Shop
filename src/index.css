@@ -8,10 +8,12 @@
 
 button.slick-arrow.slick-next::before {
     color: #7AB730;
+    font-size: 30px;
 }
 
 button.slick-arrow.slick-prev::before {
     color: #7AB730;
+    font-size: 30px;
 }
 
 ul.slick-dots {
