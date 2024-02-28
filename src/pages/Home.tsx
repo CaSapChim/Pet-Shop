@@ -5,6 +5,7 @@ import { ServiceComponent } from "../components/ServiceComponent";
 import { ProductComponent } from "../components/ProductComponent";
 import { OfferComponent } from "../components/OfferComponent";
 import { PricingPlan } from "../components/PricingPlan";
+import { TeamMembersComponent } from "../components/TeamMembersComponent";
 
 export const Home = () => {
   return (
@@ -34,6 +35,7 @@ export const Home = () => {
       <ProductComponent/>
       <OfferComponent/>
       <PricingPlan/>
+      <TeamMembersComponent/>
     </>
   );
 };
