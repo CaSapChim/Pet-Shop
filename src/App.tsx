@@ -2,6 +2,7 @@ import { BrowserRouter as Router } from "react-router-dom"
 import { TopBar } from "./components/TopBar"
 import { Header } from "./components/Header"
 import { Navigation } from "./Navigation"
+import { Footer } from "./components/Footer"
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Header/>
         </div>
       <Navigation/>
+      <Footer/>
       </Router>
     </div>
   )
