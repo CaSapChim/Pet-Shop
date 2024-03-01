@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShop, faArrowRight, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
@@ -28,7 +28,9 @@ export const Header = () => {
         { name: "Blog Detail", link: "" },
     ]
 
-    const [activeLink, setActiveLink] = useState<string>("Home");
+    const location = useLocation();
+
+    const [activeLink, setActiveLink] = useState<string | null>("Home");
     const [open, setOpen] = useState<boolean>(false);
 
     return (
@@ -42,7 +44,7 @@ export const Header = () => {
                     items.map((item, i) => (
                         <li 
                             key={i} 
-                            className={`ml-10 font-bold text-xl hover:text-primarycolor duration-300 ${item.name.toLowerCase() == activeLink.toLowerCase() ? "text-primarycolor" : ""}`}
+                            className={`ml-10 font-bold text-xl hover:text-primarycolor duration-300 ${item.name.toLowerCase() == activeLink?.toLowerCase() ? "text-primarycolor" : ""}`}
                             onClick={() => setActiveLink(item.name)}
                         >
                             <Link to={item.link}>
@@ -75,9 +77,11 @@ export const Header = () => {
                     </div>
                 </li>
             </ul>
-            <div className='bg-primarycolor h-full w-64 flex justify-center items-center text-white font-bold text-xl ml-20 px-10'>
-                <span className='w-full flex gap-2 items-center cursor-pointer'>CONTACT <FontAwesomeIcon icon={faArrowRight} className='text-sm'/></span>
-            </div>
+            <Link onClick={() => setActiveLink(null)} to="/contact" className='bg-primarycolor h-full w-64 flex justify-center items-center text-white font-bold text-xl ml-20 px-10'>
+                <div>
+                    <span className='w-full flex gap-2 items-center cursor-pointer'>CONTACT <FontAwesomeIcon icon={faArrowRight} className='text-sm'/></span>
+                </div>
+            </Link>
         </header>
     )
 }

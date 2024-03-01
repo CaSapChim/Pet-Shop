@@ -66,7 +66,7 @@ export const Footer = () => {
                         <input 
                             type="text" 
                             placeholder='Your Email'
-                            className='p-4 w-2/3 focus:outline-none focus:ring-4 focus:ring-primarycolor focus:ring-opacity-35 duration-300'
+                            className='p-4 w-2/3 focus:outline-none focus:ring-4 focus:ring-primarycolor focus:ring-opacity-35 delay-200 duration-200'
                         />
                         <button className='text-white font-extrabold bg-primarycolor w-4/12 text-base'>SIGN UP</button>
                     </div>

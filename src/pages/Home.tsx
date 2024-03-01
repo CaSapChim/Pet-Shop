@@ -4,7 +4,7 @@ import { AboutComponent } from "../components/AboutComponent";
 import { ServiceComponent } from "../components/ServiceComponent";
 import { ProductComponent } from "../components/ProductComponent";
 import { OfferComponent } from "../components/OfferComponent";
-import { PricingPlan } from "../components/PricingPlan";
+import { PricingPlanComponent } from "../components/PricingPlanComponent";
 import { TeamMembersComponent } from "../components/TeamMembersComponent";
 import { TestimonialComponents } from "../components/TestimonialComponents";
 import { LastestBlogComponent } from "../components/LastestBlogComponent";
@@ -36,7 +36,7 @@ export const Home = () => {
       <ServiceComponent/>
       <ProductComponent/>
       <OfferComponent/>
-      <PricingPlan/>
+      <PricingPlanComponent/>
       <TeamMembersComponent/>
       <TestimonialComponents/>
       <LastestBlogComponent/>

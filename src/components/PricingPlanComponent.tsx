@@ -51,7 +51,7 @@ class PetPricingFactory {
 
 
 
-export const PricingPlan = () => {
+export const PricingPlanComponent = () => {
     const basicTier =  PetPricingFactory.createPetPricing("basic");
     const standardTier = PetPricingFactory.createPetPricing("standard");
     const extendedTier = PetPricingFactory.createPetPricing("extended");
