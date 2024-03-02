@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShop, faArrowRight, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
@@ -21,17 +21,31 @@ export const Header = () => {
     ]
 
     const itemsOfPage: ItemOfPage[] = [
-        { name: "Pricing Plan", link: "" },
-        { name: "The Team", link: "" },
-        { name: "Testimonial", link: "" },
-        { name: "Blog Grid", link: "" },
-        { name: "Blog Detail", link: "" },
+        { name: "Pricing Plan", link: "/page/pricingplan" },
+        { name: "The Team", link: "/page/theteam" },
+        { name: "Testimonial", link: "/page/testimonial" },
     ]
-
-    const location = useLocation();
 
     const [activeLink, setActiveLink] = useState<string | null>("Home");
     const [open, setOpen] = useState<boolean>(false);
+    const [activeLinkDropDown, setActiveLinkDropDown] = useState<boolean>(false);
+
+    // Ẩn dropdown khi click ra ngoài phạm vi
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            const target = event.target as HTMLElement;
+            if (!target.closest('.dropdown-container')) {
+                setOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
 
     return (
         <header className='h-20 w-full flex items-center bg-white border-b'>
@@ -56,22 +70,30 @@ export const Header = () => {
                 <li 
                     className={`relative ml-10 cursor-pointer`}
                     onClick={() => setOpen(!open)}
+                    onBlur={() => setOpen(open)}
                 >
-                    <p className='flex items-center gap-2 hover:text-primarycolor duration-300 font-bold text-xl'>
+                    <p className={`flex items-center gap-2 hover:text-primarycolor duration-300 font-bold text-xl ${activeLinkDropDown ? "text-primarycolor" : "" }`}>
                         PAGE <FontAwesomeIcon icon={faCaretDown} className='w-4 h-4'/>
                     </p>
                     <div className={`
-                        absolute bg-white h-fit py-2 w-36 -bottom-[240px] -translate-x-5  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]
+                        dropdown-container
+                        absolute bg-white h-fit py-2 w-36 -bottom-[163px] -translate-x-5  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]
                         ${open ? "" : "hidden"}
                     `}>
                         {
                             itemsOfPage.map((item, i) => (
-                                <div
-                                    key={i}
-                                    className='hover:bg-gray-300 p-2'
-                                >
-                                    {item.name}
-                                </div>
+                                <Link key={i} to={item.link}>
+                                    <div
+                                        onClick={() => {
+                                                setActiveLink(item.name);
+                                                setActiveLinkDropDown(true);
+                                            }
+                                        }
+                                        className={`hover:bg-gray-300 p-2 ${item.name.toLowerCase() == activeLink?.toLowerCase() ? "bg-primarycolor text-white" : ""}`}
+                                    >
+                                        {item.name}
+                                    </div> 
+                                </Link>
                             ))
                         }
                     </div>
