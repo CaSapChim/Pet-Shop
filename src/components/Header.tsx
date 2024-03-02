@@ -59,7 +59,10 @@ export const Header = () => {
                         <li 
                             key={i} 
                             className={`ml-10 font-bold text-xl hover:text-primarycolor duration-300 ${item.name.toLowerCase() == activeLink?.toLowerCase() ? "text-primarycolor" : ""}`}
-                            onClick={() => setActiveLink(item.name)}
+                            onClick={() => {
+                                setActiveLink(item.name);
+                                setActiveLinkDropDown(false);
+                            }}
                         >
                             <Link to={item.link}>
                                 {item.name}
