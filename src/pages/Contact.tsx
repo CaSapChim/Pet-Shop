@@ -5,12 +5,12 @@ export const Contact = () => {
     const animateFocus: string = "focus:outline-none focus:ring-4 focus:ring-primarycolor focus:ring-opacity-35 delay-200 duration-200";
 
     return (
-        <div className='px-3 py-12 mx-10'>
+        <div className='px-3 py-12 mx-10 max-lg:mx-3'>
             <div className='border-l-4 border-primarycolor h-32 flex flex-col mb-10'>
                 <p className='text-primarycolor font-bold text-md pl-10'>CONTACT US</p>
-                <p className='font-bold text-5xl pl-10'>PLEASE FEEL FREE TO<br />CONTACT US</p>
+                <p className='font-bold text-5xl max-lg:text-3xl pl-10'>PLEASE FEEL FREE TO<br />CONTACT US</p>
             </div>
-            <div className='grid grid-cols-[6fr,4fr] gap-10'>
+            <div className='grid lg:grid-cols-[6fr,4fr] gap-10'>
                 <div className='flex flex-col gap-3'>
                     <input type="text" className={`bg-gray-200 p-4 placeholder:text-gray-500 ${animateFocus}`} placeholder='Your Name'/>
                     <input type="text" className={`bg-gray-200 p-4 placeholder:text-gray-500 ${animateFocus}`} placeholder="Your Email"/>
@@ -18,7 +18,7 @@ export const Contact = () => {
                     <textarea rows={8} className={`bg-gray-200 p-4 placeholder:text-gray-500 ${animateFocus}`} placeholder='Message'></textarea>
                     <button className="text-white bg-primarycolor p-4 mt-2 hover:text-black duration-300 text-lg font-extrabold">SEND MESSAGE</button>
                 </div>
-                <div className='bg-gray-200 p-12 flex flex-col gap-y-5'>
+                <div className='bg-gray-200 lg:p-10 max-lg:p-4 flex flex-col gap-y-5'>
                     <div className='flex gap-5'>
                         <span className='flex items-center'>
                             <FontAwesomeIcon icon={faLocationDot} className='scale-150 text-primarycolor text-xl'/>

@@ -77,7 +77,7 @@ export const ProductComponent = () => {
     <div className='px-3 py-12 mx-10'>
         <div className='border-l-4 border-primarycolor h-32 flex flex-col mb-10'>
           <p className='text-primarycolor font-bold text-md pl-10'>PRODUCTS</p>
-          <p className='font-bold text-5xl pl-10'>PRODUCTS FOR YOUR <br />BEST FRIENDS</p>
+          <p className='font-bold text-5xl max-lg:text-3xl pl-10'>PRODUCTS FOR YOUR <br />BEST FRIENDS</p>
         </div>
         <div className='w-full m-auto'>
           <Slider {...settings}>

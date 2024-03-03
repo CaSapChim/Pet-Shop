@@ -75,17 +75,17 @@ export const TeamMembersComponent = () => {
     };  
 
     return (
-        <div className='px-3 py-12 mx-10'>
+        <div className='px-3 py-12 mx-10 max-lg:mx-4'>
             <div className='border-l-4 border-primarycolor h-32 flex flex-col'>
                 <p className='text-primarycolor font-bold text-md pl-10'>TEAM MEMBERS</p>
-                <p className='font-bold text-5xl pl-10'>QUALIFIED PETS CARE <br />PROFESSIONALS</p>
+                <p className='font-bold text-5xl max-lg:text-3xl pl-10'>QUALIFIED PETS CARE <br />PROFESSIONALS</p>
             </div>
             <div className='w-full m-auto'>
-                <Slider {...settings} className='mt-10 mx-10'>
+                <Slider {...settings} className='mt-10 mx-10 max-lg:'>
                     {
                         members.map((mem, i) => (
                             <div key={i} className='bg-gray-200'>
-                                <img src={mem.image} alt="" />
+                                <img src={mem.image} alt=""/>
                                 <div className='text-center py-4'>
                                     <h1 className='font-extrabold text-2xl'>
                                         {mem.name}

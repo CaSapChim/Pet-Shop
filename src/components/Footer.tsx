@@ -22,7 +22,7 @@ export const Footer = () => {
 
     return (
         <footer className='bg-gray-200 p-16 text-gray-600'>
-            <div className='grid grid-cols-4 gap-12 size-fit'>
+            <div className='grid lg:grid-cols-4 gap-12 size-fit max-lg:grid-rows-4'>
                 <div>
                     <h1 className='text-black font-extrabold text-xl border-l-4 border-primarycolor mb-4'>
                         <p className='pl-4'>GET IN TOUCH</p>

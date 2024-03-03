@@ -10,7 +10,7 @@ interface PricingCardProps {
 
 export const PricingCard: React.FC<PricingCardProps> = ({ tier, benefits, price }) => {
     return (
-        <div className={`relative bg-gray-100 w-2/3 mx-5 mb-5 pb-32 ${tier !== "Standard" ? "mt-14" : ""}`}>
+        <div className={`relative bg-gray-100 lg:w-2/3 max-lg:w-full mx-5 mb-5 pb-32 ${tier !== "Standard" ? "lg:mt-14" : ""}`}>
             <div className="text-center">
                 <h1 className="font-extrabold text-3xl pt-8">{tier}</h1>
                 <p className="text-gray-500 mb-10">The Best Choice</p>

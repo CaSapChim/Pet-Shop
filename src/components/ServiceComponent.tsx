@@ -24,17 +24,17 @@ export const ServiceComponent = () => {
   ]
 
   return (
-    <div className='px-3 py-12 mx-10'>
+    <div className='px-3 py-12 mx-10 max-lg:mx-4'>
         <div className='border-l-4 border-primarycolor h-32 flex flex-col mb-10'>
           <p className='text-primarycolor font-bold text-md pl-10'>SERVICES</p>
-          <p className='font-bold text-5xl pl-10'>OUR EXCELLENT PET <br />CARE SERVICES</p>
+          <p className='font-bold text-5xl max-lg:text-3xl pl-10'>OUR EXCELLENT PET <br />CARE SERVICES</p>
         </div>
-        <div className='grid grid-cols-2 gap-10'>
+        <div className='grid lg:grid-cols-2 gap-10 max-lg:grid-cols-1'>
           {
             cards.map((card, i) => (
               <div key={i} className='bg-gray-200 p-6 flex items-center gap-10'>
-                <div>
-                  <img src={card.icon} alt="icon" className='w-32 h-32' style={{ filter: 'invert(50%) sepia(50%) saturate(547%) hue-rotate(45deg) brightness(102%) contrast(83%)' }}/>
+                <div className='h-full'>
+                  <img src={card.icon} alt="icon" className='w-32 h-32 max-lg:w-48 max-lg:h-48 max-lg:-translate-y-14' style={{ filter: 'invert(50%) sepia(50%) saturate(547%) hue-rotate(45deg) brightness(102%) contrast(83%)' }}/>
                 </div>
                 <div>
                   <h1 className='font-extrabold text-xl mb-3'>

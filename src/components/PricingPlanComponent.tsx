@@ -57,12 +57,12 @@ export const PricingPlanComponent = () => {
     const extendedTier = PetPricingFactory.createPetPricing("extended");
 
     return (
-        <div className='px-3 py-12 mx-10'>
+        <div className='px-3 py-12 lg:mx-10 max-lg:mx-4'>
             <div className='border-l-4 border-primarycolor h-32 flex flex-col'>
                 <p className='text-primarycolor font-bold text-md pl-10'>PRICING PLAN</p>
-                <p className='font-bold text-5xl pl-10'>COMPETITIVE PRICING <br />FOR PET SERVICES</p>
+                <p className='font-bold text-5xl max-lg:text-3xl pl-10'>COMPETITIVE PRICING <br />FOR PET SERVICES</p>
             </div>
-            <div className='flex justify-between mt-8'>
+            <div className='lg:flex justify-between mt-8 max-lg:flex max-lg:flex-col max-lg:items-center'>
                 <PricingCard tier="Basic" benefits={basicTier.benefits} price={basicTier.price}/>
                 <PricingCard tier="Standard" benefits={standardTier.benefits} price={standardTier.price}/>
                 <PricingCard tier="Extended" benefits={extendedTier.benefits} price={extendedTier.price}/>

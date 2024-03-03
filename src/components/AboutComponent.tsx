@@ -2,12 +2,14 @@ import React from 'react'
 
 export const AboutComponent = () => {
   return (
-    <div className='px-3 py-12 flex mx-10'>
-      <img src="/about.jpg" alt="image about us" className='w-[500px] h-[500px] object-cover'/>
-      <div className='pl-20 size-fit'>
+    <div className='px-3 py-12 flex lg:mx-10 max-lg:mx-4 max-lg:flex-col max-lg:gap-10'>
+      <div className='w-full max-lg:flex max-lg:justify-center'>
+        <img src="/about.jpg" alt="image about us" className='w-[500px] h-[500px] max-lg:w-[600px] object-cover'/>
+      </div>
+      <div className='lg:pl-20 size-fit'>
         <div className='border-l-4 border-primarycolor h-32 flex flex-col'>
           <p className='text-primarycolor font-bold text-md pl-10'>ABOUT US</p>
-          <p className='font-bold text-5xl pl-10'>WE KEEP YOUR PETS <br />HAPPY ALL TIME</p>
+          <p className='font-bold text-5xl max-lg:text-3xl pl-10'>WE KEEP YOUR PETS <br />HAPPY ALL TIME</p>
         </div>
         <p className='my-10 text-gray-500 text-xl font-bold'>Diam dolor diam ipsum tempor sit. Clita erat ipsum et lorem stet no labore lorem sit clita duo justo magna dolore</p>
         <div className='size-fit bg-gray-200 p-5'>

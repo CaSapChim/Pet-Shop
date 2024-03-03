@@ -28,16 +28,16 @@ export const LastestBlogComponent = () => {
     ]
 
     return (
-        <div className='px-3 py-12 mx-10'>
-            <div className='border-l-4 border-primarycolor size-fit flex flex-col mb-10'>
+        <div className='px-3 py-12 mx-10 max-lg:mx-4'>
+            <div className='border-l-4 border-primarycolor flex flex-col mb-10'>
                 <p className='text-primarycolor font-bold text-md pl-10'>LASTEST BLOG</p>
-                <p className='font-bold text-5xl pl-10'>LATEST ARTICLES FROM <br /> OUR BLOG POST</p>
+                <p className='font-bold text-5xl max-lg:text-3xl pl-10'>LATEST ARTICLES FROM <br /> OUR BLOG POST</p>
             </div>
-            <div className='w-full flex'>
+            <div className='w-full lg:flex'>
                 {
                     blogs.map((blog, i) => (
-                        <div key={i} className='bg-gray-200 flex gap-5 m-6'> 
-                            <img src={blog.imgUrl} alt="" className='w-4/12 object-cover'/>
+                        <div key={i} className='bg-gray-200 lg:flex gap-5 lg:m-6 max-lg:my-10'> 
+                            <img src={blog.imgUrl} alt="" className='lg:w-4/12 object-cover w-full'/>
                             <div className='w-full text-gray-600 p-6'>
                                 <span className='mr-3 text-sm'><FontAwesomeIcon icon={faBookmark}/> {blog.cata}</span>
                                 <span className='text-sm'><FontAwesomeIcon icon={faCalendar}/> {blog.date}</span>

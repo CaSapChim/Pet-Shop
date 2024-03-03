@@ -6,14 +6,16 @@ import { Footer } from "./components/Footer"
 
 function App() {
   return (
-    <div className="w-full min-h-screen font-mono">
+    <div className="w-full min-h-screen font-mono overflow-hidden">
       <Router>
         <TopBar/>
-        <div className="sticky z-50 top-0">
+        <div className="max-lg:mb-20">
           <Header/>
         </div>
-      <Navigation/>
-      <Footer/>
+        <div className="overflow-hidden">
+          <Navigation/>
+        </div>
+        <Footer/>
       </Router>
     </div>
   )
