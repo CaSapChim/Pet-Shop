@@ -82,7 +82,7 @@ export const Header = () => {
     return (
         <>
             <header className='h-20 w-full flex items-center bg-white border-b fixed z-50 top-0'>
-                <Link to="/" className='flex items-center gap-4 ml-20 max-lg:ml-6 max-lg:w-full lg:w-full'>
+                <Link to="/" onClick={() => setActiveLinkDropDown(false)} className='flex items-center gap-4 ml-20 max-lg:ml-6 max-lg:w-full lg:w-full'>
                     <FontAwesomeIcon icon={faShop} className='scale-150 text-2xl text-primarycolor'/>
                     <h1 className='text-4xl max-lg:text-2xl font-bold'>PET SHOP</h1>
                 </Link>
