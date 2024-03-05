@@ -19,10 +19,15 @@ export default {
           '0%': { opacity: 1, transform: 'translateY(-20px)' },
           '100%': { opacity: 0, transform: 'translateY(20px)' },
         },
+        showDetails: {
+          '0%': { opacity: 0, transform: "translateY(20px)" },
+          '100%': { opacity: 1, transform: "translateY(0)" },
+        }
       },
       animation: {
         fadeUp: "fadeUp .3s linear",
         fadeDown: "fadeDown .4s linear",
+        showDetails: "showDetails .4s ease-in-out"
       },
     },
   },
