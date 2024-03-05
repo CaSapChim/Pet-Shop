@@ -23,24 +23,36 @@ export const ProductComponent = () => {
       desc: "test test test test test test test test test test",
       price: 100000,
       image: "/product-1.png",
+      madeIn: "VietNam",
+      nutrition: "test",
+      taste: "test"
     },
     {
       name: "QUALITY PET FOODS 2",
       desc: "test test test test test test test test test test",
       price: 200000,
       image: "/product-2.png",
+      madeIn: "VietNam",
+      nutrition: "test",
+      taste: "test"
     },
     {
       name: "QUALITY PET FOODS 3",
       desc: "test test test test test test test test test test",
       price: 300000,
       image: "/product-3.png",
+      madeIn: "VietNam",
+      nutrition: "test",
+      taste: "test"
     },
     {
       name: "QUALITY PET FOODS 4",
       desc: "test test test test test test test test test test",
       price: 400000,
       image: "/product-4.png",
+      madeIn: "VietNam",
+      nutrition: "test",
+      taste: "test"
     },
   ];
 
